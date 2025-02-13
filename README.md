@@ -49,7 +49,7 @@ In order to contribute, follow these steps:
 5. Push to GitHub and **open a Pull Request (PR)**.
 
 #### 📬 Contact
-For discussions, feature requests, or inquiries, please visit my GitHub profile. Contributions and feedback are always appreciated!
+For discussions, feature requests, or inquiries, please visit my GitHub profile: [florian-ariasu](https://github.com/florian-ariasu). Contributions and feedback are always appreciated!
 
 ---
 
