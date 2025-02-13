@@ -11,7 +11,7 @@ Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL.
 1. Clone the repository:
 ##### HTTPS
 ```bash
-git clone https://github.com/florian-ariasu/tank-battle.git
+git clone https://github.com/florian-ariasu/tank-wars.git
 ```
 
 ##### SSH
@@ -21,7 +21,7 @@ git clone git@github.com:florian-ariasu/tank-wars.git
 
 2. Navigate to it:
 ```bash
-cd tank-battle
+cd tank-wars
 ```
 
 3. Create and navigate to build directory:
