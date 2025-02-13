@@ -1,7 +1,7 @@
 ## Tank Battle - OpenGL Simulation 🚀
 
 ### 🎮 Overview
-Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, and projectile mechanics**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
+Tank Battle is a **2D tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, and projectile mechanics**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
 
 ### 🛠️ Installation & Setup
 #### Prerequisites
