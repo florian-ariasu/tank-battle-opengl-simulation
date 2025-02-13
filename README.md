@@ -62,8 +62,8 @@ make
 - Collision detection determines whether a projectile hits an opponent.
 
 #### ❤️ Life Bar System
-- Currently, the tank disappears after multiple hits, but **the life bar is not implemented yet** (future improvement).
-- The life bar should decrease gradually as the tank gets hit
+- Currently, the tank disappears after multiple hits, but **the health bar has not been implemented yet** (future improvement).
+- The health bar will gradually decrease in size as the tank takes damage.
 
 ### 🔥 Planned Features & Contributions
 Below are key features that need improvement:
