@@ -69,7 +69,7 @@ make
 Below are key features that need improvement:
 
 #### 🔧 Features to Implement
-1️⃣ **Gradual Life Bar Depletion** - Ensure the life bar **updates in real-time** and reduces smoothly as tanks take damage.
+1️⃣ **Gradual Health Bar Depletion** - Ensure the health bar **updates in real-time** and reduces smoothly as tanks take damage.
 
 2️⃣ **Terrain Destruction** - Make the terrain **display holes or craters** when projectiles land, increasing tactical depth.
 
