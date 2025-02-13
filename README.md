@@ -23,7 +23,7 @@ Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL.
 - Collision detection determines whether a projectile hits an opponent.
 
 #### ❤️ Life Bar System
-- **Health bar** **does not** reduce when tanks take damage.
+- Health bar **does not** reduce when tanks take damage.
 - Currently, the tank disappears after multiple hits, but **the life bar does not decrease gradually** (future improvement).
 
 ---
