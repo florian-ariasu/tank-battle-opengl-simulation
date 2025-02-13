@@ -23,13 +23,13 @@ Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL.
 - Collision detection determines whether a projectile hits an opponent.
 
 #### ❤️ Life Bar System
-- Tanks have a **life bar** that depletes upon getting hit.
+- *Health* bar reduces when tanks take damage.
 - Currently, the tank disappears after multiple hits, but **the life bar does not decrease gradually** (future improvement).
 
 ---
 
-### 🔥 Future Enhancements & Contributions
-We encourage **open-source contributions**! Below are key features that need improvement:
+### 🔥 Planned Features & Contributions
+Below are key features that need improvement:
 
 #### 🔧 Features to Implement
 1️⃣ **Gradual Life Bar Depletion** - Ensure the life bar **updates in real-time** and reduces smoothly as tanks take damage.
@@ -49,8 +49,8 @@ We welcome contributions! Follow these steps:
 4. Implement your changes & **commit** with a descriptive message.
 5. Push to GitHub and **open a Pull Request (PR)**.
 
-#### Where to Find Us
-For discussions, feature requests, or questions, check out my GitHub profile: **[florian-ariasu](https://github.com/florian-ariasu)**. Let’s collaborate and build something amazing! 🚀
+#### 📬 Contact
+For discussions, feature requests, or inquiries, please visit my GitHub profile. Contributions and feedback are always appreciated!
 
 ---
 
