@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "/Users/florianariasu/temp/tank-wars/CMakeLists.txt"
-  "CMakeFiles/3.31.0/CMakeCCompiler.cmake"
-  "CMakeFiles/3.31.0/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.31.0/CMakeSystem.cmake"
+  "CMakeFiles/3.31.5/CMakeCCompiler.cmake"
+  "CMakeFiles/3.31.5/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.31.5/CMakeSystem.cmake"
   "/Users/florianariasu/temp/tank-wars/infra/utils.cmake"
   "/opt/homebrew/lib/cmake/assimp-5.4/assimpConfig.cmake"
   "/opt/homebrew/lib/cmake/assimp-5.4/assimpConfigVersion.cmake"
@@ -158,11 +158,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.31.0/CMakeSystem.cmake"
-  "CMakeFiles/3.31.0/CMakeCCompiler.cmake"
-  "CMakeFiles/3.31.0/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.31.0/CMakeCCompiler.cmake"
-  "CMakeFiles/3.31.0/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.31.5/CMakeSystem.cmake"
+  "CMakeFiles/3.31.5/CMakeCCompiler.cmake"
+  "CMakeFiles/3.31.5/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.31.5/CMakeCCompiler.cmake"
+  "CMakeFiles/3.31.5/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
