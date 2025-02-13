@@ -61,7 +61,7 @@ make
 - **Projectile trajectory influenced by gravity** for realism.
 - Collision detection determines whether a projectile hits an opponent.
 
-#### ❤️ Life Bar System
+#### ❤️ Health Bar System
 - Currently, the tank disappears after multiple hits, but **the health bar has not been implemented yet** (future improvement).
 - The health bar will gradually decrease in size as the tank takes damage.
 
