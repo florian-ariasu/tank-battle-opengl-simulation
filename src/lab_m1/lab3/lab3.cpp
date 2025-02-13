@@ -87,8 +87,37 @@ void Lab3::Update(float deltaTimeSeconds)
     UpdateProjectiles(tankProjectiles2, deltaTimeSeconds);
 }
 
+void Lab3::RenderHealthBar(float x, float y, float health, const glm::vec3& color) {
+    // Background of health bar (grey)
+    Mesh* backgroundBar = object2D::CreateRectangle(
+        "healthBackground",
+        glm::vec3(x, y, 0),
+        100,  // width
+        10,   // height
+        glm::vec3(0.5f, 0.5f, 0.5f),
+        true
+    );
+    RenderMesh(backgroundBar, shaders["VertexColor"], glm::mat4(1));
+
+    // Actual health bar (green/yellow/red based on health)
+    Mesh* healthBar = object2D::CreateRectangle(
+        "healthForeground",
+        glm::vec3(x, y, 0),
+        health,  // width based on current health
+        10,      // height
+        color,
+        true
+    );
+    RenderMesh(healthBar, shaders["VertexColor"], glm::mat4(1));
+}
+
 void Lab3::CreateFirstTank(float deltaTimeSeconds)
 {
+    // If tank is destroyed, don't render it
+    if (tank1Health <= 0) {
+        return;
+    }
+
     float offsetTankX = 5.0f;
     float tankXFinal = tankXStart + offsetTankX;
 
@@ -122,6 +151,7 @@ void Lab3::CreateFirstTank(float deltaTimeSeconds)
     Mesh *rectangle = object2D::CreateRectangle("rectangle", glm::vec3(20, 38, 0), 50, 5, glm::vec3(0.1f, 0.1f, 0.1f), true);
     RenderMesh(rectangle, shaders["VertexColor"], turretMatrix);
 
+    // Only allow movement if tank is alive
     if (window->KeyHold(GLFW_KEY_A))
     {
         tankXStart -= 150 * deltaTimeSeconds;
@@ -152,6 +182,11 @@ void Lab3::CreateFirstTank(float deltaTimeSeconds)
 
 void Lab3::CreateSecondTank(float deltaTimeSeconds)
 {
+    // If tank is destroyed, don't render it
+    if (tank2Health <= 0) {
+        return;
+    }
+
     float offsetSecondTankX = 5.0f;
     float tankSecondXFinal = tankSecondXStart + offsetSecondTankX;
 
@@ -185,6 +220,7 @@ void Lab3::CreateSecondTank(float deltaTimeSeconds)
     Mesh *rectangleSecond = object2D::CreateRectangle("rectangle", glm::vec3(20, 38, 0), 50, 5, glm::vec3(0.1f, 0.1f, 0.1f), true);
     RenderMesh(rectangleSecond, shaders["VertexColor"], turretSecondMatrix);
 
+    // Only allow movement if tank is alive
     if (window->KeyHold(GLFW_KEY_LEFT))
     {
         tankSecondXStart -= 150 * deltaTimeSeconds;
@@ -213,13 +249,11 @@ void Lab3::CreateSecondTank(float deltaTimeSeconds)
     }
 }
 
-void Lab3::UpdateProjectiles(std::vector<Projectile> &projectiles, float deltaTimeSeconds)
-{
+void Lab3::UpdateProjectiles(std::vector<Projectile> &projectiles, float deltaTimeSeconds) {
     glm::vec3 gravity = glm::vec3(0, -100, 0);
     glm::ivec2 resolution = window->GetResolution();
 
-    for (auto it = projectiles.begin(); it != projectiles.end();)
-    {
+    for (auto it = projectiles.begin(); it != projectiles.end();) {
         // Update velocity (so to simulate gravity)
         it->velocity += gravity * deltaTimeSeconds;
 
@@ -231,12 +265,50 @@ void Lab3::UpdateProjectiles(std::vector<Projectile> &projectiles, float deltaTi
 
         // Calculate ground height at the projectile's x position
         int xIndex = (int)(it->position.x * ground.size() / resolution.x);
-        if (xIndex >= 0 && xIndex < ground.size())
-        {
+        if (xIndex >= 0 && xIndex < ground.size()) {
             float groundHeight = ground[xIndex];
 
-            if (it->lifetime <= 0 || it->position.y <= groundHeight)
-            {
+            // Check if projectile hits ground or lifetime expires
+            if (it->lifetime <= 0 || it->position.y <= groundHeight) {
+                it = projectiles.erase(it);
+                continue;
+            }
+        }
+
+        // Check for tank hits
+        if (&projectiles == &tankProjectiles1) {  // Projectiles from tank 1
+            // Calculate distance to tank2
+            float distanceToTank2 = glm::distance(
+                it->position,
+                glm::vec3(tankSecondXStart, 
+                         ground[(int)(tankSecondXStart * ground.size() / resolution.x)] + 40,  // Adding 40 to match tank height
+                         0)
+            );
+
+            if (tank2Alive && distanceToTank2 < 65) {  // 65 is approximate tank radius
+                tank2Health -= 25.0f;  // Damage per hit
+                if (tank2Health <= 0) {
+                    tank2Alive = false;
+                    tank2Health = 0;
+                }
+                it = projectiles.erase(it);
+                continue;
+            }
+        } else {  // Projectiles from tank 2
+            // Calculate distance to tank1
+            float distanceToTank1 = glm::distance(
+                it->position,
+                glm::vec3(tankXStart, 
+                         ground[(int)(tankXStart * ground.size() / resolution.x)] + 40,  // Adding 40 to match tank height
+                         0)
+            );
+
+            if (tank1Alive && distanceToTank1 < 65) {  // 65 is approximate tank radius
+                tank1Health -= 25.0f;  // Damage per hit
+                if (tank1Health <= 0) {
+                    tank1Alive = false;
+                    tank1Health = 0;
+                }
                 it = projectiles.erase(it);
                 continue;
             }
@@ -254,15 +326,15 @@ void Lab3::UpdateProjectiles(std::vector<Projectile> &projectiles, float deltaTi
 
 void Lab3::OnKeyPress(int key, int mods)
 {
-    // Populate the projectile vector as I press corresponding keys
-    if (key == GLFW_KEY_SPACE)
+    // Only allow shooting if tank is alive
+    if (key == GLFW_KEY_SPACE && tank1Health > 0)
     {
         glm::vec3 startPos = glm::vec3(tankXStart, ground[(int)(tankXStart * ground.size() / window->GetResolution().x)] + 40, 0);
         glm::vec3 velocity = glm::vec3(cos(turretAngle), sin(turretAngle), 0) * 300.0f;
         tankProjectiles1.push_back({startPos, velocity, 10.0f});
     }
 
-    if (key == GLFW_KEY_ENTER)
+    if (key == GLFW_KEY_ENTER && tank2Health > 0)
     {
         glm::vec3 startPos = glm::vec3(tankSecondXStart, ground[(int)(tankSecondXStart * ground.size() / window->GetResolution().x)] + 40, 0);
         glm::vec3 velocity = glm::vec3(cos(turretSecondAngle), sin(turretSecondAngle), 0) * 300.0f;

@@ -58,5 +58,16 @@ namespace m1
 
       // Projectile function
       void UpdateProjectiles(std::vector<Projectile>& projectiles, float deltaTimeSeconds);
+
+      // Tank health variables
+      float tank1Health = 100.0f;
+      float tank2Health = 100.0f;
+      const float DAMAGE_PER_HIT = 25.0f; // Damage dealt by each projectile
+      bool tank1Alive = true;
+      bool tank2Alive = true;
+
+      // Health bar rendering function
+      void RenderHealthBar(float x, float y, float health, const glm::vec3& color);
+
    };
 } // namespace m1
