@@ -1,4 +1,4 @@
-# Tank Battle - OpenGL Simulation 🚀
+## Tank Battle - OpenGL Simulation 🚀
 
 ### 🎮 Overview
 Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, and projectile mechanics**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
@@ -75,7 +75,7 @@ Below are key features that need improvement:
 
 3️⃣ **Dark Mode** - Add a **dark mode toggle** for better visibility and aesthetics.
 
-### 🤝 Contributing
+#### 🤝 Contributing
 In order to contribute, follow these steps:
 1. **Fork** this repository.
 2. **Clone** your forked repository.
@@ -83,7 +83,7 @@ In order to contribute, follow these steps:
 4. Implement your changes & **commit** with a descriptive message.
 5. Push to GitHub and **open a Pull Request (PR)**.
 
-#### 📬 Contact
+### 📬 Contact
 For discussions, feature requests, or inquiries, please visit my GitHub profile: [florian-ariasu](https://github.com/florian-ariasu). Contributions and feedback are always appreciated!
 
 ### 📜 License
