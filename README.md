@@ -1,7 +1,7 @@
 # Tank Battle - OpenGL Simulation 🚀
 
 ### 🎮 Overview
-Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, projectile mechanics, and a static life bar system**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
+Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, and projectile mechanics**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
 
 ### 🛠️ Installation & Setup
 #### Prerequisites
@@ -62,8 +62,8 @@ make
 - Collision detection determines whether a projectile hits an opponent.
 
 #### ❤️ Life Bar System
-- Health bar **does not** reduce when tanks take damage.
-- Currently, the tank disappears after multiple hits, but **the life bar does not decrease gradually** (future improvement).
+- Currently, the tank disappears after multiple hits, but **the life bar is not implemented yet** (future improvement).
+- The life bar should decrease gradually as the tank gets hit
 
 ### 🔥 Planned Features & Contributions
 Below are key features that need improvement:
