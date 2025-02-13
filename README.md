@@ -8,25 +8,39 @@ Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL.
 - CMake (version 3.16 or higher)
 
 #### Build & Run Instructions
-1. Clone the repository and navigate to it:
+1. Clone the repository:
+##### HTTPS
 ```bash
 git clone https://github.com/florian-ariasu/tank-battle.git
+```
+
+##### SSH
+```bash
+git clone git@github.com:florian-ariasu/tank-wars.git
+```
+
+2. Navigate to it:
+```bash
 cd tank-battle
 ```
 
-2. Create and navigate to build directory:
+3. Create and navigate to build directory:
 ```bash
 mkdir build
 cd build
 ```
 
-3. Generate build files and compile:
+4. Generate build files:
 ```bash
 cmake ..
+```
+
+5. Compile:
+  ```bash
 make
 ```
 
-4. Run the game:
+6. Run the game:
 ```bash
 ./bin/Debug/GFXFramework
 ```
