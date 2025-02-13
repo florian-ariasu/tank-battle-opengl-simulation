@@ -54,5 +54,5 @@ For discussions, feature requests, or questions, check out my GitHub profile: **
 
 ---
 
-## 📜 License
+### 📜 License
 This project is licensed under the **MIT License** – feel free to use and modify it!
