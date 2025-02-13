@@ -41,7 +41,6 @@ Below are key features that need improvement:
 ---
 
 ### 🤝 Contributing
-#### How to Contribute
 In order to contribute, follow these steps:
 1. **Fork** this repository.
 2. **Clone** your forked repository.
