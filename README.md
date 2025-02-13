@@ -1,12 +1,37 @@
-## 🚀 Tank Battle - OpenGL Simulation
+# Tank Battle - OpenGL Simulation 🚀
 
 ### 🎮 Overview
 Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, projectile mechanics, and a static life bar system**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
 
----
+### 🛠️ Installation & Setup
+#### Prerequisites
+- CMake (version 3.16 or higher)
+
+#### Build & Run Instructions
+1. Clone the repository and navigate to it:
+```bash
+git clone https://github.com/florian-ariasu/tank-battle.git
+cd tank-battle
+```
+
+2. Create and navigate to build directory:
+```bash
+mkdir build
+cd build
+```
+
+3. Generate build files and compile:
+```bash
+cmake ..
+make
+```
+
+4. Run the game:
+```bash
+./bin/Debug/GFXFramework
+```
 
 ### ✅ Implemented Functionalities
-
 #### 🌍 Terrain Generation
 - The terrain is generated using the **triangle strip method** in OpenGL.
 - Uses **four amplitude-frequency wave functions** to create a realistic, undulating battlefield.
@@ -26,8 +51,6 @@ Tank Battle is a **2D physics-based tank combat simulation** built using OpenGL.
 - Health bar **does not** reduce when tanks take damage.
 - Currently, the tank disappears after multiple hits, but **the life bar does not decrease gradually** (future improvement).
 
----
-
 ### 🔥 Planned Features & Contributions
 Below are key features that need improvement:
 
@@ -37,8 +60,6 @@ Below are key features that need improvement:
 2️⃣ **Terrain Destruction** - Make the terrain **display holes or craters** when projectiles land, increasing tactical depth.
 
 3️⃣ **Dark Mode** - Add a **dark mode toggle** for better visibility and aesthetics.
-
----
 
 ### 🤝 Contributing
 In order to contribute, follow these steps:
@@ -50,8 +71,6 @@ In order to contribute, follow these steps:
 
 #### 📬 Contact
 For discussions, feature requests, or inquiries, please visit my GitHub profile: [florian-ariasu](https://github.com/florian-ariasu). Contributions and feedback are always appreciated!
-
----
 
 ### 📜 License
 This project is licensed under the **MIT License** – feel free to use and modify it!
