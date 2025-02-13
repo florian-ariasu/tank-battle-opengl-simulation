@@ -26,7 +26,7 @@ We invite you to contribute! Check out these cool upcoming features:
 🔹 **Dark Mode Toggle** - Add a feature to switch between light and dark mode.  
 
 ## 🤝 Contributing
-Want to enhance **Tank Battle**? Fork this repository and submit a **pull request**! Visit my **GitHub Profile**: [florianAriasu](https://github.com/florian-ariasu) and let’s build something awesome together. 🚀
+Want to enhance **Tank Battle**? Fork this repository and submit a **pull request**! Visit my **GitHub Profile**: [florian-ariasu](https://github.com/florian-ariasu) and let’s build something awesome together. 🚀
 
 ## 📜 License
 This project is open-source and available under the **MIT License**.
