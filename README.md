@@ -87,4 +87,4 @@ In order to contribute, follow these steps:
 For discussions, feature requests, or inquiries, please visit my GitHub profile: [florian-ariasu](https://github.com/florian-ariasu). Contributions and feedback are always appreciated!
 
 ### 📜 Licence
-This project is licensed under the **MIT License** – feel free to use and modify it!
+This project is licensed under the MIT Licence. See the [LICENCE](./LICENSE) file for further details.
