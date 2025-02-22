@@ -1,4 +1,4 @@
-## Tank Battle - OpenGL Simulation 🚀
+## Tank Battle - OpenGL Simulation
 
 ### 🎮 Overview
 Tank Battle is a **2D tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, and projectile mechanics**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
@@ -46,45 +46,42 @@ make
 ```
 
 ### ✅ Implemented Functionalities
-#### 🌍 Terrain Generation
+#### Terrain Generation
 - The terrain is generated using the **triangle strip method** in OpenGL.
 - Uses **four amplitude-frequency wave functions** to create a realistic, undulating battlefield.
 - Ensures smooth interactions between tanks and ground.
 
-#### 🏆 Tank Mechanics
+#### Tank Mechanics
 - **Two tanks** are rendered and controlled independently.
 - Movement logic accounts for terrain height to ensure tanks remain aligned with the surface.
 - **Rotating turret** allows dynamic aiming and shooting.
 
-#### 💥 Projectile System
+#### Projectile System
 - Players can shoot projectiles at each other.
 - **Projectile trajectory influenced by gravity** for realism.
 - Collision detection determines whether a projectile hits an opponent.
 
-#### ❤️ Health Bar System
+#### Health Bar System
 - Currently, the tank disappears after multiple hits, but **the health bar has not been implemented yet** (future improvement).
 - The health bar will gradually decrease in size as the tank takes damage.
 
 ### 🔥 Planned Features & Contributions
 Below are key features that need improvement:
 
-#### 🔧 Features to Implement
-1️⃣ **Gradual Health Bar Depletion** - Ensure the health bar **updates in real-time** and reduces smoothly as tanks take damage.
+#### Features to Implement
+- **Gradual Health Bar Depletion** - Ensure the health bar **updates in real-time** and reduces smoothly as tanks take damage.
 
-2️⃣ **Terrain Destruction** - Make the terrain **display holes or craters** when projectiles land, increasing tactical depth.
+- **Terrain Destruction** - Make the terrain **display holes or craters** when projectiles land, increasing tactical depth.
 
-3️⃣ **Dark Mode** - Add a **dark mode toggle** for better visibility and aesthetics.
+- **Dark Mode** - Add a **dark mode toggle** for better visibility and aesthetics.
 
-#### 🤝 Contributing
+### 🤝 Contributing
 In order to contribute, follow these steps:
 1. **Fork** this repository.
 2. **Clone** your forked repository.
 3. Create a **feature branch** (`feature/new-enhancement`).
 4. Implement your changes & **commit** with a descriptive message.
 5. Push to GitHub and **open a Pull Request (PR)**.
-
-### 📬 Contact
-For discussions, feature requests, or inquiries, please visit my GitHub profile: [florian-ariasu](https://github.com/florian-ariasu). Contributions and feedback are always appreciated!
 
 ### 📜 Licence
 This project is licensed under the MIT Licence. See the [LICENCE](./LICENSE) file for further details.
