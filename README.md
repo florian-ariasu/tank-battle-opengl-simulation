@@ -1,9 +1,9 @@
 ## Tank Battle - OpenGL Simulation
 
-### 🎮 Overview
+### Overview
 Tank Battle is a **2D tank combat simulation** built using OpenGL. This project features **realistic terrain generation, tank movement, and projectile mechanics**. The game allows two players to engage in a strategic battle where they must aim, shoot, and move tactically to win.
 
-### 🛠️ Installation & Setup
+### Installation & Setup
 #### Prerequisites
 - CMake (version 3.16 or higher)
 
@@ -45,7 +45,7 @@ make
 ./bin/Debug/GFXFramework
 ```
 
-### ✅ Implemented Functionalities
+### Implemented Functionalities
 #### Terrain Generation
 - The terrain is generated using the **triangle strip method** in OpenGL.
 - Uses **four amplitude-frequency wave functions** to create a realistic, undulating battlefield.
@@ -65,7 +65,7 @@ make
 - Currently, the tank disappears after multiple hits, but **the health bar has not been implemented yet** (future improvement).
 - The health bar will gradually decrease in size as the tank takes damage.
 
-### 🔥 Planned Features & Contributions
+### Planned Features & Contributions
 Below are key features that need improvement:
 
 #### Features to Implement
@@ -75,7 +75,7 @@ Below are key features that need improvement:
 
 - **Dark Mode** - Add a **dark mode toggle** for better visibility and aesthetics.
 
-### 🤝 Contributing
+### Contributing
 In order to contribute, follow these steps:
 1. **Fork** this repository.
 2. **Clone** your forked repository.
@@ -83,5 +83,5 @@ In order to contribute, follow these steps:
 4. Implement your changes & **commit** with a descriptive message.
 5. Push to GitHub and **open a Pull Request (PR)**.
 
-### 📜 Licence
+### Licence
 This project is licensed under the MIT Licence. See the [LICENCE](./LICENSE) file for further details.
