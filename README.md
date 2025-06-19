@@ -75,6 +75,8 @@ Below are key features that need improvement:
 
 - **Dark Mode** - Add a **dark mode toggle** for better visibility and aesthetics.
 
+> **Disclaimer**: This project was developed with the assistance of AI tools, including large language models, for ideation, code suggestions, debugging, documentation, and optimization. While the logic and direction are mine, much of the raw code was AI-assisted.
+
 ### Contributing
 In order to contribute, follow these steps:
 1. **Fork** this repository.
